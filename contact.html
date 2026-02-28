@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gezi Günlüğü • İletişim</title>
+  <meta name="description" content="İletişim sayfası." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <div class="brand-mark"></div>
+        <div>
+          <div class="brand-title">Gezi Günlüğü</div>
+          <div class="brand-sub">bir merhaba de</div>
+        </div>
+      </a>
+
+      <nav class="nav" id="mainNav">
+        <a href="index.html">Ana Sayfa</a>
+        <a href="blog.html">Blog</a>
+        <a href="gallery.html">Galeri</a>
+        <a href="about.html">Hakkında</a>
+        <a class="active" href="contact.html">İletişim</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="search">
+          <span class="icon">⌕</span>
+          <input id="siteSearch" type="search" placeholder="Blog içinde ara..." />
+        </div>
+        <a class="icon-btn" href="#" title="Instagram (sonra eklersin)">⌁</a>
+        <button class="icon-btn burger" id="burgerBtn" title="Menü">≡</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>İletişim</h2>
+        <a href="index.html">Ana sayfa →</a>
+      </div>
+
+      <div class="grid">
+        <div class="card reveal" style="grid-column: span 5; padding:16px;">
+          <h3>Ufak bir alan, yeter</h3>
+          <p>
+            Sosyal linkleri göz önünde tutmak istemiyorsan en iyi yer footer veya üstteki küçük ikonlar.
+            İstersen buraya da ekleyebilirsin.
+          </p>
+          <p style="margin-top:10px;">
+            <span class="badge">Instagram</span>
+            <span class="badge">YouTube</span>
+            <span class="badge">X</span>
+          </p>
+          <div class="tip">
+            Bu form “demo”. Gerçekten mail göndermek için bir servis (Formspree gibi) gerekir.
+            İstersen onu da eklerim.
+          </div>
+        </div>
+
+        <div class="card reveal" style="grid-column: span 7; padding:16px;">
+          <h3>Mesaj bırak</h3>
+          <form class="form" onsubmit="event.preventDefault(); alert('Demo form: Şimdilik sadece görsel :)');">
+            <div class="field">
+              <label>Ad Soyad</label>
+              <input type="text" placeholder="Adın" required />
+            </div>
+            <div class="field">
+              <label>E-posta</label>
+              <input type="email" placeholder="mail@ornek.com" required />
+            </div>
+            <div class="field">
+              <label>Mesaj</label>
+              <textarea placeholder="Merhaba..." required></textarea>
+            </div>
+            <button class="btn primary" type="submit">Gönder</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Gezi Günlüğü</div>
+      <div style="display:flex; gap:12px;">
+        <a href="index.html">Ana Sayfa</a>
+        <a href="blog.html">Blog</a>
+        <a href="gallery.html">Galeri</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gezi Günlüğü • Blog</title>
+  <meta name="description" content="Kategori bazlı blog listesi." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <div class="brand-mark"></div>
+        <div>
+          <div class="brand-title">Gezi Günlüğü</div>
+          <div class="brand-sub">rotalar • notlar</div>
+        </div>
+      </a>
+
+      <nav class="nav" id="mainNav">
+        <a href="index.html">Ana Sayfa</a>
+        <a class="active" href="blog.html">Blog</a>
+        <a href="gallery.html">Galeri</a>
+        <a href="about.html">Hakkında</a>
+        <a href="contact.html">İletişim</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="search">
+          <span class="icon">⌕</span>
+          <input id="siteSearch" type="search" placeholder="Başlık ara..." />
+        </div>
+        <a class="icon-btn" href="#" title="Instagram (sonra eklersin)">⌁</a>
+        <button class="icon-btn burger" id="burgerBtn" title="Menü">≡</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Blog</h2>
+        <a href="gallery.html">Fotoğraflar →</a>
+      </div>
+
+      <p class="reveal">
+        Kategoriye göre filtrele ya da üstteki arama kutusuyla başlık içinde arama yap.
+      </p>
+
+      <div class="filters reveal">
+        <button class="chip active" data-filter="all">Tümü</button>
+        <button class="chip" data-filter="ankara">Ankara</button>
+        <button class="chip" data-filter="istanbul">İstanbul</button>
+        <button class="chip" data-filter="ege">Ege</button>
+        <button class="chip" data-filter="dogu">Doğu</button>
+        <button class="chip" data-filter="yurtdisi">Yurtdışı</button>
+      </div>
+
+      <div class="grid">
+        <a class="card reveal" data-category="ankara" data-title="İncek’te sakin kahvaltı rotası" href="post.html?post=ankara-inkekahvalti">
+          <div class="card-media"><img src="assets/img/g1.jpg" alt="Kapak" /></div>
+          <div class="card-body">
+            <div class="meta"><span class="badge">Ankara</span><span>• 8 dk</span><span>• 2026</span></div>
+            <h3>İncek’te sakin kahvaltı rotası</h3>
+            <p>3 durak, 1 kısa yürüyüş, 1 fotoğraf spotu… hafif bir gün.</p>
+            <span class="read">Oku →</span>
+          </div>
+        </a>
+
+        <a class="card reveal" data-category="istanbul" data-title="Galata’da akşam yürüyüşü" href="post.html?post=istanbul-galata-aksam">
+          <div class="card-media"><img src="assets/img/g2.jpg" alt="Kapak" /></div>
+          <div class="card-body">
+            <div class="meta"><span class="badge">İstanbul</span><span>• 6 dk</span><span>• Fotoğraflı</span></div>
+            <h3>Galata’da akşam yürüyüşü</h3>
+            <p>Tek akşam, küçük sokaklar ve iyi bir kapanış: manzara + kahve.</p>
+            <span class="read">Oku →</span>
+          </div>
+        </a>
+
+        <a class="card reveal" data-category="ege" data-title="Urla’da hafta sonu planı" href="post.html?post=ege-urla-haftasonu">
+          <div class="card-media"><img src="assets/img/g3.jpg" alt="Kapak" /></div>
+          <div class="card-body">
+            <div class="meta"><span class="badge">Ege</span><span>• 10 dk</span><span>• 2 gün</span></div>
+            <h3>Urla’da hafta sonu planı</h3>
+            <p>İki güne sığan mini plan: yürüyüş, kahve, sahil ve sakinlik.</p>
+            <span class="read">Oku →</span>
+          </div>
+        </a>
+
+        <a class="card reveal" data-category="dogu" data-title="Kars’ta kış günü: kısa gezi notları" href="post.html?post=dogu-kars-kis">
+          <div class="card-media"><img src="assets/img/g4.jpg" alt="Kapak" /></div>
+          <div class="card-body">
+            <div class="meta"><span class="badge">Doğu</span><span>• 7 dk</span><span>• Kış</span></div>
+            <h3>Kars’ta kış günü: kısa gezi notları</h3>
+            <p>Isınma durakları, yürüyüş noktaları, hızlı “ne yenir?” listesi.</p>
+            <span class="read">Oku →</span>
+          </div>
+        </a>
+
+        <a class="card reveal" data-category="yurtdisi" data-title="Prag’da 1 günde şehir hissi" href="post.html?post=yurtdisi-prag-1gun">
+          <div class="card-media"><img src="assets/img/g5.jpg" alt="Kapak" /></div>
+          <div class="card-body">
+            <div class="meta"><span class="badge">Yurtdışı</span><span>• 9 dk</span><span>• 1 gün</span></div>
+            <h3>Prag’da 1 günde şehir hissi</h3>
+            <p>Biraz yürüyüş, biraz ara sokaklar. Turistik olmayan tatlı bir gün.</p>
+            <span class="read">Oku →</span>
+          </div>
+        </a>
+
+        <a class="card reveal" data-category="ankara" data-title="ODTÜ 100. Yıl çevresi: kısa yürüyüş rotası" href="post.html?post=ankara-odtu-100yil">
+          <div class="card-media"><img src="assets/img/g6.jpg" alt="Kapak" /></div>
+          <div class="card-body">
+            <div class="meta"><span class="badge">Ankara</span><span>• 5 dk</span><span>• Yakın rota</span></div>
+            <h3>ODTÜ 100. Yıl çevresi: kısa yürüyüş rotası</h3>
+            <p>Akşamüstü çık, biraz yürü, sonra kahveyle kapat. Basit ama iyi.</p>
+            <span class="read">Oku →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Gezi Günlüğü</div>
+      <div style="display:flex; gap:12px;">
+        <a href="index.html">Ana Sayfa</a>
+        <a href="about.html">Hakkında</a>
+        <a href="contact.html">İletişim</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

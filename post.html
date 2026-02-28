@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gezi Günlüğü • Yazı</title>
+  <meta name="description" content="Blog yazısı detayı." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <div class="brand-mark"></div>
+        <div>
+          <div class="brand-title">Gezi Günlüğü</div>
+          <div class="brand-sub">yazı</div>
+        </div>
+      </a>
+
+      <nav class="nav" id="mainNav">
+        <a href="index.html">Ana Sayfa</a>
+        <a class="active" href="blog.html">Blog</a>
+        <a href="gallery.html">Galeri</a>
+        <a href="about.html">Hakkında</a>
+        <a href="contact.html">İletişim</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="search">
+          <span class="icon">⌕</span>
+          <input id="siteSearch" type="search" placeholder="Blog içinde ara..." />
+        </div>
+        <a class="icon-btn" href="#" title="Instagram (sonra eklersin)">⌁</a>
+        <button class="icon-btn burger" id="burgerBtn" title="Menü">≡</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="post">
+    <div class="container">
+      <div class="post-hero reveal">
+        <img id="postImg" src="assets/img/g1.jpg" alt="Kapak" />
+        <div class="post-body">
+          <div class="meta">
+            <span class="badge" id="postBadge">Ankara</span>
+            <span id="postMeta">• 8 dk • 2026</span>
+          </div>
+          <h1 id="postTitle">İncek’te sakin kahvaltı rotası</h1>
+          <p id="postDesc">
+            Kısa bir kaçamak: hafif bir gün, sıcak notlar, kolay bir plan.
+          </p>
+
+          <div class="post-content" id="postContent">
+            <!-- JS ile dolduruluyor -->
+          </div>
+
+          <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;">
+            <a class="btn" href="blog.html">← Blog listesine dön</a>
+            <a class="btn primary" href="gallery.html">Galeri →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Gezi Günlüğü</div>
+      <div style="display:flex; gap:12px;">
+        <a href="index.html">Ana Sayfa</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">İletişim</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Basit içerik sistemi: URL'deki ?post=... değerine göre yazı içeriği değişir.
+    // Sonradan istersen bunu JSON'a taşıyabiliriz.
+    const posts = {
+      "ankara-inkekahvalti": {
+        title: "İncek’te sakin kahvaltı rotası",
+        badge: "Ankara",
+        meta: "• 8 dk • 2026",
+        desc: "Kalabalıktan kaçıp nefes alma: 3 durak + kısa yürüyüş + fotoğraf spotu.",
+        img: "assets/img/g1.jpg",
+        html: `
+          <h2>Hızlı özet</h2>
+          <ul>
+            <li>Toplam süre: 3–4 saat</li>
+            <li>Tempo: yavaş</li>
+            <li>En iyi zaman: sabah / öğleye yakın</li>
+          </ul>
+
+          <h2>Rota</h2>
+          <p>Bu kısmı kendi mekanlarınla doldurabilirsin. Ben şablon olsun diye yazdım:</p>
+          <ul>
+            <li>Durak 1: kahvaltı (rahat bir başlangıç)</li>
+            <li>Durak 2: kısa yürüyüş (10–20 dk)</li>
+            <li>Durak 3: fotoğraf spotu (altın saat)</li>
+          </ul>
+
+          <blockquote>
+            İpucu: Her yazıda “Toplam süre / tempo / en iyi zaman” üçlüsünü koyarsan çok okunur.
+          </blockquote>
+
+          <h2>Küçük notlar</h2>
+          <p>Bir cümlelik sıcak notlar: “şurada oturmak iyi geldi”, “şu sokak çok tatlıydı” gibi.</p>
+        `
+      },
+      "istanbul-galata-aksam": {
+        title: "Galata’da akşam yürüyüşü",
+        badge: "İstanbul",
+        meta: "• 6 dk • Fotoğraflı",
+        desc: "Tek akşam, küçük sokaklar ve iyi bir kapanış: manzara + kahve.",
+        img: "assets/img/g2.jpg",
+        html: `
+          <h2>Hızlı özet</h2>
+          <ul>
+            <li>Toplam süre: 2–3 saat</li>
+            <li>Tempo: orta</li>
+            <li>En iyi zaman: gün batımı</li>
+          </ul>
+
+          <h2>Plan</h2>
+          <p>Önce kısa bir kahve, sonra ara sokaklar, en son manzara.</p>
+          <ul>
+            <li>18:00 — Başlangıç</li>
+            <li>18:30 — Yürüyüş</li>
+            <li>19:30 — Manzara / fotoğraf</li>
+          </ul>
+
+          <blockquote>Not: Eğer kalabalık artarsa “bir sokak içeri” gir, daha sakin olur.</blockquote>
+        `
+      },
+      "ege-urla-haftasonu": {
+        title: "Urla’da hafta sonu planı",
+        badge: "Ege",
+        meta: "• 10 dk • 2 gün",
+        desc: "İki güne sığan mini plan: yürüyüş, kahve, sahil ve sakinlik.",
+        img: "assets/img/g3.jpg",
+        html: `
+          <h2>1. Gün</h2>
+          <p>Sahil yürüyüşü + 2 durak. Çok kasmadan.</p>
+
+          <h2>2. Gün</h2>
+          <p>Yakın keşif + fotoğraf. Günün sonuna da “iyi bir kahve” bırak.</p>
+
+          <blockquote>İpucu: “Plan B” koy: hava bozarsa kapalı mekan alternatifi gibi.</blockquote>
+        `
+      },
+      "dogu-kars-kis": {
+        title: "Kars’ta kış günü: kısa gezi notları",
+        badge: "Doğu",
+        meta: "• 7 dk • Kış",
+        desc: "Isınma durakları, yürüyüş noktaları, hızlı “ne yenir?” listesi.",
+        img: "assets/img/g4.jpg",
+        html: `
+          <h2>Yanına al</h2>
+          <ul>
+            <li>Katmanlı giyim</li>
+            <li>Termos</li>
+            <li>Yedek eldiven</li>
+          </ul>
+
+          <h2>Rota</h2>
+          <p>Kış rotası: kısa yürüyüş + sık ısınma molası.</p>
+
+          <blockquote>Not: “Üşüdüm ama değdi” yazıları en tatlı yazılar :)</blockquote>
+        `
+      },
+      "yurtdisi-prag-1gun": {
+        title: "Prag’da 1 günde şehir hissi",
+        badge: "Yurtdışı",
+        meta: "• 9 dk • 1 gün",
+        desc: "Biraz yürüyüş, biraz ara sokaklar. Turistik olmayan tatlı bir gün.",
+        img: "assets/img/g5.jpg",
+        html: `
+          <h2>Mini rota</h2>
+          <p>Merkez → ara sokaklar → kısa müze → kahve → gün batımı.</p>
+
+          <h2>İyi gelen şey</h2>
+          <p>Şehirde kendini kaybetmek değil; yavaşça karışmak.</p>
+
+          <blockquote>İpucu: Her şehir için 1 “en sakin köşe” seç, onu anlat.</blockquote>
+        `
+      },
+      "ankara-odtu-100yil": {
+        title: "ODTÜ 100. Yıl çevresi: kısa yürüyüş rotası",
+        badge: "Ankara",
+        meta: "• 5 dk • Yakın rota",
+        desc: "Akşamüstü çık, biraz yürü, sonra kahveyle kapat. Basit ama iyi.",
+        img: "assets/img/g6.jpg",
+        html: `
+          <h2>Hızlı özet</h2>
+          <ul>
+            <li>Toplam süre: 1–2 saat</li>
+            <li>Tempo: hafif</li>
+            <li>En iyi zaman: akşamüstü</li>
+          </ul>
+
+          <h2>Rota</h2>
+          <ul>
+            <li>17:30 — Çıkış</li>
+            <li>18:00 — Kısa yürüyüş</li>
+            <li>18:30 — Kahve / kapanış</li>
+          </ul>
+        `
+      }
+    };
+
+    const params = new URLSearchParams(location.search);
+    const key = params.get("post") || "ankara-inkekahvalti";
+    const data = posts[key] || posts["ankara-inkekahvalti"];
+
+    document.getElementById("postTitle").textContent = data.title;
+    document.getElementById("postBadge").textContent = data.badge;
+    document.getElementById("postMeta").textContent = data.meta;
+    document.getElementById("postDesc").textContent = data.desc;
+    document.getElementById("postImg").src = data.img;
+    document.getElementById("postContent").innerHTML = data.html;
+  </script>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

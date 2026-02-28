@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gezi Günlüğü • Hakkında</title>
+  <meta name="description" content="Blog hakkında." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <div class="brand-mark"></div>
+        <div>
+          <div class="brand-title">Gezi Günlüğü</div>
+          <div class="brand-sub">kim bu?</div>
+        </div>
+      </a>
+
+      <nav class="nav" id="mainNav">
+        <a href="index.html">Ana Sayfa</a>
+        <a href="blog.html">Blog</a>
+        <a href="gallery.html">Galeri</a>
+        <a class="active" href="about.html">Hakkında</a>
+        <a href="contact.html">İletişim</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="search">
+          <span class="icon">⌕</span>
+          <input id="siteSearch" type="search" placeholder="Blog içinde ara..." />
+        </div>
+        <a class="icon-btn" href="#" title="Instagram (sonra eklersin)">⌁</a>
+        <button class="icon-btn burger" id="burgerBtn" title="Menü">≡</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Hakkında</h2>
+        <a href="contact.html">İletişime geç →</a>
+      </div>
+
+      <div class="hero-card reveal" style="padding:18px;">
+        <p>
+          Burası benim “az konuşup çok hissettiren” gezi günlüğüm.
+          Büyük planlar değil; küçük anlar, sıcak notlar, kısa rotalar.
+        </p>
+        <ul style="margin:0 0 0 18px; color: rgba(255,248,240,0.72); line-height:1.7;">
+          <li>Yazıları şehir/kategori bazlı ayırabilirsin.</li>
+          <li>Fotoğrafları galeriye koyup büyütme (lightbox) kullanabilirsin.</li>
+          <li>İleride istersen yorum sistemi eklenebilir (ama şart değil).</li>
+        </ul>
+
+        <blockquote>
+          İpucu: Site adını değiştirmek için üstteki <code>Gezi Günlüğü</code> yazan yerleri kendi markanla değiştir.
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Gezi Günlüğü</div>
+      <div style="display:flex; gap:12px;">
+        <a href="index.html">Ana Sayfa</a>
+        <a href="blog.html">Blog</a>
+        <a href="gallery.html">Galeri</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

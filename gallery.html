@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gezi Günlüğü • Galeri</title>
+  <meta name="description" content="Fotoğraf galerisi." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <div class="brand-mark"></div>
+        <div>
+          <div class="brand-title">Gezi Günlüğü</div>
+          <div class="brand-sub">fotoğraflar</div>
+        </div>
+      </a>
+
+      <nav class="nav" id="mainNav">
+        <a href="index.html">Ana Sayfa</a>
+        <a href="blog.html">Blog</a>
+        <a class="active" href="gallery.html">Galeri</a>
+        <a href="about.html">Hakkında</a>
+        <a href="contact.html">İletişim</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="search">
+          <span class="icon">⌕</span>
+          <input id="siteSearch" type="search" placeholder="Blog içinde ara..." />
+        </div>
+        <a class="icon-btn" href="#" title="Instagram (sonra eklersin)">⌁</a>
+        <button class="icon-btn burger" id="burgerBtn" title="Menü">≡</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Galeri</h2>
+        <a href="blog.html">Yazılara dön →</a>
+      </div>
+      <p class="reveal">Fotoğrafa tıklayınca büyük görüntü açılır.</p>
+
+      <div class="gallery-grid reveal">
+        <div class="g-item"><img src="assets/img/g1.jpg" alt="Foto 1" /></div>
+        <div class="g-item"><img src="assets/img/g2.jpg" alt="Foto 2" /></div>
+        <div class="g-item"><img src="assets/img/g3.jpg" alt="Foto 3" /></div>
+        <div class="g-item"><img src="assets/img/g4.jpg" alt="Foto 4" /></div>
+        <div class="g-item"><img src="assets/img/g5.jpg" alt="Foto 5" /></div>
+        <div class="g-item"><img src="assets/img/g6.jpg" alt="Foto 6" /></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="lightbox" aria-hidden="true">
+    <div class="close" title="Kapat">✕</div>
+    <img src="" alt="Büyük fotoğraf" />
+  </div>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Gezi Günlüğü</div>
+      <div style="display:flex; gap:12px;">
+        <a href="index.html">Ana Sayfa</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">İletişim</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

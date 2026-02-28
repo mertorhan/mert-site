@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gezi Günlüğü • Ana Sayfa</title>
+  <meta name="description" content="Koyu temalı, şık, çok sayfalı gezi blogu şablonu." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <!-- ÜST BAR -->
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <div class="brand-mark"></div>
+        <div>
+          <div class="brand-title">Gezi Günlüğü</div>
+          <div class="brand-sub">minimal • koyu • modern</div>
+        </div>
+      </a>
+
+      <nav class="nav" id="mainNav">
+        <a class="active" href="index.html">Ana Sayfa</a>
+        <a href="blog.html">Blog</a>
+        <a href="gallery.html">Galeri</a>
+        <a href="about.html">Hakkında</a>
+        <a href="contact.html">İletişim</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="search">
+          <span class="icon">⌕</span>
+          <input id="siteSearch" type="search" placeholder="Blog içinde ara..." />
+        </div>
+
+        <!-- Sosyal ikonlar göz önünde değil: küçük butonlar -->
+        <a class="icon-btn" href="#" title="Instagram (sonra eklersin)">⌁</a>
+
+        <button class="icon-btn burger" id="burgerBtn" title="Menü">≡</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-card reveal">
+        <div class="hero-media">
+          <div class="kicker"><span class="dot"></span> Yeni rotalar • notlar • fotoğraflar</div>
+          <h1>Şehir şehir değil, <br/>adım adım birikiyor hikâyeler.</h1>
+          <p>
+            Bu şablonu kendi gezi blogun için düzenleyebilirsin: kategoriler, yazılar, galeri,
+            hatta ileride yorum sistemi.
+          </p>
+          <div class="hero-cta">
+            <a class="btn primary" href="blog.html">Blog’a git →</a>
+            <a class="btn" href="gallery.html">Galeriye bak</a>
+          </div>
+        </div>
+      </div>
+
+      <aside class="hero-card hero-side reveal">
+        <h2>Kategoriler</h2>
+        <p>Blog yazılarını tema/şehir bazlı ayır.</p>
+        <div class="pill-row">
+          <a class="pill" href="blog.html#ankara">Ankara</a>
+          <a class="pill" href="blog.html#istanbul">İstanbul</a>
+          <a class="pill" href="blog.html#ege">Ege</a>
+          <a class="pill" href="blog.html#dogu">Doğu</a>
+          <a class="pill" href="blog.html#yurtdisi">Yurtdışı</a>
+        </div>
+
+        <div class="tip">
+          <strong>İpucu:</strong> Yeni bir yazı eklemek için <code>blog.html</code> içindeki kartlardan birini kopyala.
+          <br/>Detay metnini de <code>post.html</code> içinde değiştir.
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ÖNE ÇIKANLAR -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Öne çıkan rotalar</h2>
+        <a href="blog.html">Tüm yazılar →</a>
+      </div>
+
+      <div class="grid">
+        <!-- Kart 1 -->
+        <a class="card reveal" href="post.html?post=ankara-inkekahvalti">
+          <div class="card-media">
+            <img src="assets/img/g1.jpg" alt="Kapak" />
+          </div>
+          <div class="card-body">
+            <div class="meta">
+              <span class="badge">Ankara</span>
+              <span>• 8 dk okuma</span>
+              <span>• 2026</span>
+            </div>
+            <h3>İncek’te sakin kahvaltı rotası</h3>
+            <p>Kalabalıktan uzak, kısa bir kaçamak: mekan önerileri + küçük yürüyüş noktaları.</p>
+            <span class="read">Oku →</span>
+          </div>
+        </a>
+
+        <!-- Kart 2 -->
+        <a class="card reveal" href="post.html?post=istanbul-galata-aksam">
+          <div class="card-media">
+            <img src="assets/img/g2.jpg" alt="Kapak" />
+          </div>
+          <div class="card-body">
+            <div class="meta">
+              <span class="badge">İstanbul</span>
+              <span>• 6 dk</span>
+              <span>• Fotoğraflı</span>
+            </div>
+            <h3>Galata’da akşam yürüyüşü</h3>
+            <p>Işıklar, ara sokaklar, küçük duraklar… Tek bir akşamda şehir hissi.</p>
+            <span class="read">Oku →</span>
+          </div>
+        </a>
+
+        <!-- Kart 3 -->
+        <a class="card reveal" href="post.html?post=ege-urla-haftasonu">
+          <div class="card-media">
+            <img src="assets/img/g3.jpg" alt="Kapak" />
+          </div>
+          <div class="card-body">
+            <div class="meta">
+              <span class="badge">Ege</span>
+              <span>• 10 dk</span>
+              <span>• 2 gün</span>
+            </div>
+            <h3>Urla’da hafta sonu planı</h3>
+            <p>Kahve, sahil, kısa rota: iki güne sığan pratik bir mini plan.</p>
+            <span class="read">Oku →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Gezi Günlüğü</div>
+      <div style="display:flex; gap:12px;">
+        <a href="about.html">Hakkında</a>
+        <a href="contact.html">İletişim</a>
+        <a href="robots.txt">robots</a>
+        <a href="sitemap.xml">sitemap</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
